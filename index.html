@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Mathematics Course</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+	  input{
+		  padding: 5px;
+		  border-radius: 20px;
+	  }
+	  .file{
+		  padding:10px;
+		  border-radius:15px;
+	  } 
+	  button{
+		  border-top-left-radius: 20px;
+		  border-bottom-right-radius: 20px;
+	  }
+
+	  .all-browsers {
+      margin: 0;
+      padding: 15px;
+      background-color: lightgray;
+    }
+
+    .all-browsers > h1,
+    .browser {
+      margin: 10px;
+      padding: 15px;
+    }
+
+    .browser {
+      background: white;
+    }
+
+    .browser > h2,
+    p {
+      margin: 4px;
+      font-size: 100%;
+    }
+
+    body {
+		background-color: #333;
+		color:#fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+		
+		
+		
+	  }
+	  .mijloc {
+		  padding-right: 15px;
+      padding-left: 15px;
+     
+    
+    
+    
+	  }
+	  footer {
+      padding: 10px;
+      background-color: white;
+      color: black;
+      margin-top: auto;
+    }
+ #container {
+      margin: 0 auto;
+      max-width: 1850px;
+    }
+
+    #content {
+      width: 100%;
+      padding: 0px;
+		
+    }
+	  /* Stil pentru textul din bara de navigare */
+.navbar-default .navbar-nav > li > a {
+    color: black; /* Text negru prestabilit */
+    text-decoration: none; /* Elimina sublinierea textului prestabilit */
+    position: relative; /* Folosit pentru a crea o linie de sub text */
+}
+
+/* Stil pentru linie sub text la hover */
+.navbar-default .navbar-nav > li > a:hover::after {
+    content: ""; /* Conținut gol pentru linie */
+    position: absolute; /* Stabilim poziția absolută */
+    bottom: 0; /* Poziționează linia sub text */
+    left: 0; /* Aliniază linia cu textul */
+    width: 100%; /* Latime de 100% a liniei */
+    height: 2px; /* Grosimea liniei */
+    background-color: black; /* Culoarea liniei la hover */
+}
+
+	</style>
+
+</head>
+
+<body >
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href=""><img src="*.*" class="confirmed"
+            style="width:45;height:30px;" /></a>
+        <a class="navbar-brand" href=""><font face="Lora">Matematica</font></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="">Acasă</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Despre <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+				
+                  <li><a href="#"><font  size="+2">Jocuri</font></a></li>
+                  <li><a href="#"><font  size="+2">Lectură</font></a></li>
+                  <li><a href="#"><font  size="+2">Bucătărie</font></a></li>
+                  <li><a href="#"><font  size="+2">Despre mine</font></a></li>
+               
+
+              
+            </ul>
+          </li>
+		
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+
+
+  
+<div class="mijloc">
+<br> <br>
+
+  <section id="courses" class="courses">
+
+    <h2>Course Offerings</h2>
+
+    <table>
+
+      <tr>
+
+        <th>Nr</th>
+
+        <th>Subject</th>
+
+        <th>Presentation</th>
+
+        <th>Author</th>
+
+        <th>Homework</th>
+
+      </tr>
+
+      <tr>
+
+        <td></td>
+
+        <td><input type="text" placeholder="New Subject"></td>
+
+		  <td><input class="file" type="file" id="upload"><a href="" id="upload_link"> </a></td>
+
+        <td><input type="text" placeholder="Author"></td>
+
+		  <td><input class="file" type="file" id="upload"><a href="" id="upload_link"></a></td>
+
+        <td></td>
+
+      </tr>
+
+    </table>
+
+    <button onclick="addRow()">Add Row</button>
+
+  </section>
+
+</div>
+
+  <footer>
+		<div class="container">
+			<p>&copy; 2023 Mathematics Course</p>
+	  </div>
+
+  </footer>
+
+
+
+  <script>
+
+    function addRow() {
+
+      const table = document.querySelector("table");
+
+      const newRow = table.insertRow(-1);
+
+      const rowCount = table.rows.length - 1; 
+
+      newRow.innerHTML = `
+
+        <td>${rowCount}</td>
+
+        <td><input type="text" placeholder="New Subject"></td>
+
+        <td><input type="file" id="upload"><a href="" id="upload_link">
+
+        <td><input type="text" placeholder="Author"></td>
+
+        <td><input type="file" id="upload"><a href="" id="upload_link">
+
+        <td></td>
+
+      `;
+
+    }
+
+  </script>
+
+  
+
+</html>
